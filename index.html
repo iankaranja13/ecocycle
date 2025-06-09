@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoCycle - Earn while you save the planet</title>
+    <meta name="description" content="Join EcoCycle to earn rewards while helping save our planet through smart recycling and eco-friendly practices." />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://js.puter.com/v2/"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <i class="fas fa-recycle"></i>
+          <span>EcoCycle</span>
+        </div>
+        <div class="nav-menu">
+          <a href="#hero" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#team" class="nav-link">Team</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <button id="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>EcoCycle</h1>
+        <p class="hero-tagline">Earn while you save the planet</p>
+        <button class="cta-button">Join Now</button>
+      </div>
+      <div class="hero-image">
+        <img src="/lovable-uploads/518f6f61-ea7d-4f60-9fe7-3193f02ac57c.png" alt="Children holding recycling symbols" />
+      </div>
+    </section>
+
+    <!-- Brand Bar -->
+    <section class="brand-bar">
+      <div class="brand-container">
+        <div class="brand-item">
+          <i class="fas fa-leaf"></i>
+          <span>Sustainable</span>
+        </div>
+        <div class="brand-item">
+          <i class="fas fa-users"></i>
+          <span>Community</span>
+        </div>
+        <div class="brand-item">
+          <i class="fas fa-coins"></i>
+          <span>Rewarding</span>
+        </div>
+        <div class="brand-item">
+          <i class="fas fa-globe"></i>
+          <span>Global Impact</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Founded with a simple yet powerful mission, EcoCycle was born from frustration with waste management in our cities. We transformed this challenge into a solution that rewards recycling. Our platform connects users to local pickup points, tracks contributions, and delivers valuable rewards for actions that benefit our environment.</p>
+          </div>
+          <div class="about-visual">
+            <i class="fas fa-recycle fa-5x"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Carousel -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Our Key Features</h2>
+        <div class="carousel-container">
+          <button class="carousel-btn prev" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="carousel">
+            <div class="feature-card active">
+              <div class="feature-icon">
+                <i class="fas fa-qrcode"></i>
+              </div>
+              <h3>DropPoint QR</h3>
+              <p>Scan QR codes at recycling drop points to log your contributions. Track your recycling history and earn points automatically with each scan.</p>
+              <span class="tech-tag">React Native + QR Scanner</span>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-coins"></i>
+              </div>
+              <h3>Recycle Points</h3>
+              <p>Earn points for every item recycled and redeem them for rewards. Get points by scanning, uploading receipts, and referring friends.</p>
+              <span class="tech-tag">Blockchain Rewards System</span>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-wallet"></i>
+              </div>
+              <h3>Green Wallet</h3>
+              <p>Manage your eco-earnings and rewards through our secure digital wallet. Daily stats for all your environment contributions and rewards.</p>
+              <span class="tech-tag">Secure Payment Integration</span>
+            </div>
+          </div>
+          <button class="carousel-btn next" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="carousel-indicators">
+          <span class="indicator active" data-slide="0"></span>
+          <span class="indicator" data-slide="1"></span>
+          <span class="indicator" data-slide="2"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Audience Toggle -->
+    <section class="audience-section">
+      <div class="container">
+        <h2>Who Can Benefit?</h2>
+        <div class="toggle-container">
+          <button class="toggle-btn active" data-audience="students">For Students</button>
+          <button class="toggle-btn" data-audience="parents">For Parents</button>
+        </div>
+        <div class="audience-content">
+          <div id="students-content" class="audience-block active">
+            <h3>Students & Young Environmentalists</h3>
+            <p>Learn about environmental responsibility while earning rewards for your eco-friendly actions. Join our community of young changemakers and make a difference in your school and neighborhood.</p>
+            <ul>
+              <li>Earn points for recycling at school</li>
+              <li>Compete with classmates in eco-challenges</li>
+              <li>Redeem points for educational resources</li>
+              <li>Track your environmental impact</li>
+            </ul>
+          </div>
+          <div id="parents-content" class="audience-block">
+            <h3>Parents & Families</h3>
+            <p>Teach your children valuable lessons about sustainability while earning real rewards for your family's eco-friendly practices. Make recycling a fun family activity.</p>
+            <ul>
+              <li>Family recycling challenges and goals</li>
+              <li>Educational content for children</li>
+              <li>Household waste reduction tracking</li>
+              <li>Community family events and workshops</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="faq">
+      <div class="container">
+        <h2>What People Are Saying</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does the point system work?</span>
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <p>You earn points by scanning QR codes at drop-off points, uploading recycling receipts, and participating in eco-challenges. Points can be redeemed for rewards like gift cards, eco-products, and exclusive experiences.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is EcoCycle available in my area?</span>
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We're currently operating in major cities and expanding rapidly. Check our app or website to see if we have drop-off points in your area. We're always looking to partner with local businesses and schools.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What types of materials can I recycle?</span>
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <p>We accept paper, plastic, glass, electronics, and metal items. Each drop-off point may specialize in different materials. Use our app to find the right location for your specific recycling needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+      <div class="container">
+        <h2>Meet the Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-image">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Ian Wainwright" />
+            </div>
+            <h3>Ian Wainwright</h3>
+            <p class="member-role">Co-Founder & Developer</p>
+            <p class="member-bio">Passionate about turning environmental challenges into tech solutions. Former software engineer with a mission to make sustainability accessible.</p>
+          </div>
+          <div class="team-member">
+            <div class="member-image">
+              <img src="https://images.unsplash.com/photo-1494790108755-2616b612b412?w=300&h=300&fit=crop&crop=face" alt="Jane Mavende" />
+            </div>
+            <h3>Jane Mavende</h3>
+            <p class="member-role">Head of Community</p>
+            <p class="member-bio">Environmental advocate with 8 years of experience in community engagement. Believes in the power of collective action for environmental change.</p>
+          </div>
+          <div class="team-member">
+            <div class="member-image">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="David Kimbani" />
+            </div>
+            <h3>David Kimbani</h3>
+            <p class="member-role">Operations Manager</p>
+            <p class="member-bio">Expert in logistics and operations management. Ensures our recycling network runs smoothly and efficiently across all partner locations.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chatbot Placeholder -->
+    <section class="chatbot-section">
+      <div class="container">
+        <h2>Ask EcoBot About Our Mission</h2>
+        <p class="chatbot-instructions">Ask our AI about our story, services, or how you can get involved.</p>
+        
+        <!-- Sample Questions -->
+        <div class="sample-questions">
+          <h3>Try asking:</h3>
+          <div class="question-buttons">
+            <button class="question-btn" data-question="Who founded EcoCycle and why?">Who founded EcoCycle?</button>
+            <button class="question-btn" data-question="What problems does EcoCycle solve?">What problems do you solve?</button>
+            <button class="question-btn" data-question="What services does EcoCycle offer?">What services do you offer?</button>
+            <button class="question-btn" data-question="How can I support or contact the EcoCycle team?">How can I get involved?</button>
+            <button class="question-btn" data-question="What is EcoCycle's vision for the future?">What's your long-term vision?</button>
+          </div>
+        </div>
+
+        <div class="chatbot-container">
+          <div class="chat-header">
+            <i class="fas fa-robot"></i>
+            <span>EcoBot Assistant</span>
+            <div class="status-indicator"></div>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+              <div class="message-content">
+                <p>Hi! I'm EcoBot, your environmental assistant. Ask me anything about EcoCycle's mission, services, or how we're making the world more sustainable!</p>
+              </div>
+            </div>
+          </div>
+          <div class="chat-input-container">
+            <input type="text" id="chatInput" placeholder="Ask about our mission, services, team..." />
+            <button id="sendMessage" class="send-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+          <div id="errorMessage" class="error-message-chat" style="display: none;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Get In Touch</h2>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required />
+            <span class="error-message" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+            <span class="error-message" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required></textarea>
+            <span class="error-message" id="messageError"></span>
+          </div>
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <i class="fas fa-recycle"></i>
+            <span>EcoCycle</span>
+          </div>
+          <div class="footer-stats">
+            <div class="stat-item">
+              <i class="fas fa-leaf"></i>
+              <span>Sustainable</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-award"></i>
+              <span>Rewarding</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-users"></i>
+              <span>Eco-Friendly</span>
+            </div>
+          </div>
+          <div class="footer-links">
+            <a href="https://github.com" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:info@ecocycle.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 EcoCycle. All rights reserved.</p>
+          <div class="visitor-counter">
+            <i class="fas fa-eye"></i>
+            <span>Visitors: <span id="visitorCount">0</span></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
