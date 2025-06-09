@@ -1,4 +1,4 @@
-Reset and Base Styles
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -629,8 +629,52 @@ body {
 .chatbot-section h2 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   color: var(--text-color);
+}
+
+.chatbot-instructions {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.sample-questions {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.sample-questions h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.question-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.question-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.question-btn:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
 }
 
 .chatbot-container {
@@ -695,6 +739,45 @@ body {
   max-width: 80%;
 }
 
+.typing-indicator .message-content {
+  background: var(--surface-color);
+  padding: 12px 18px;
+  border-radius: 18px 18px 18px 5px;
+}
+
+.typing-dots {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.typing-dots span {
+  width: 8px;
+  height: 8px;
+  background: var(--text-light);
+  border-radius: 50%;
+  animation: typing 1.4s infinite;
+}
+
+.typing-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  30% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
 .chat-input-container {
   display: flex;
   padding: 20px;
@@ -711,6 +794,10 @@ body {
   color: var(--text-color);
 }
 
+#chatInput:focus {
+  border-color: var(--primary-color);
+}
+
 .send-btn {
   margin-left: 10px;
   background: var(--primary-color);
@@ -721,10 +808,29 @@ body {
   border-radius: 50%;
   cursor: pointer;
   transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .send-btn:hover {
   background: var(--accent-color);
+}
+
+.error-message-chat {
+  padding: 10px 20px;
+  background: #fee2e2;
+  color: #dc2626;
+  border-radius: 5px;
+  margin: 0 20px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #fecaca;
+}
+
+[data-theme="dark"] .error-message-chat {
+  background: #450a0a;
+  color: #f87171;
+  border-color: #7f1d1d;
 }
 
 /* Contact Form */
@@ -1034,5 +1140,27 @@ body {
   .member-image img {
     width: 100px;
     height: 100px;
+  }
+
+  .question-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .question-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .chatbot-container {
+    margin: 0 10px;
+  }
+
+  .chat-messages {
+    height: 300px;
+  }
+
+  .chat-input-container {
+    padding: 15px;
   }
 }
