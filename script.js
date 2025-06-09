@@ -52,7 +52,7 @@ async function loadChatbotContext() {
     } catch (error) {
         console.error('Error loading chatbot context:', error);
         // Fallback context if file loading fails
-        chatbotContext = `You are EcoBot, the AI assistant for EcoCycle. EcoCycle is an environmental startup founded by Ian Wainwright, Jane Mavende, and David Kimbani. We reward people for recycling through our app with QR scanning, points system, and green wallet. Our mission is making sustainability accessible and rewarding. We serve students and families, helping them earn rewards while protecting the environment.`;
+        chatbotContext = `You are EcoBot, the AI assistant for EcoCycle. EcoCycle is an environmental startup founded by Ian Waruingi, Ivy Bosibori, and David Kimbani. We reward people for recycling through our app with QR scanning, points system, and green wallet. Our mission is making sustainability accessible and rewarding. We serve students and families, helping them earn rewards while protecting the environment.`;
     }
 }
 

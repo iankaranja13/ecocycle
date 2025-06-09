@@ -151,13 +151,46 @@ body {
   transition: 0.3s;
 }
 
-/* Hero Section */
 .hero {
-  min-height: 100vh;
+  position: relative;
+  height: 100vh;
+  color: #fff;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-  padding: 100px 20px 50px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: backgroundSlide 18s infinite;
+  z-index: -1;
+  opacity: 0.7; /* Adjust for clarity of text */
+}
+
+@keyframes backgroundSlide {
+  0% {
+    background-image: url('/images/dustbin.png');
+  }
+  33% {
+    background-image: url('/images/recycling.jpg');
+  }
+  66% {
+    background-image: url('/images/children.jpg');
+  }
+  100% {
+    background-image: url('/images/recycling_for_children.jpg.webp');
+  }
 }
 
 [data-theme="dark"] .hero {
@@ -165,10 +198,13 @@ body {
 }
 
 .hero-content {
-  flex: 1;
-  max-width: 600px;
-  margin-right: 50px;
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+  background: rgba(20, 1, 1, 0.4); /* Optional: makes text more readable */
+  border-radius: 8px;
 }
+
 
 .hero h1 {
   font-size: 4rem;
@@ -180,7 +216,7 @@ body {
 
 .hero-tagline {
   font-size: 1.5rem;
-  color: var(--text-light);
+  color: black;
   margin-bottom: 30px;
 }
 
@@ -292,117 +328,99 @@ body {
 
 /* Features Carousel */
 .features {
-  padding: 100px 20px;
-  background: var(--surface-color);
+  padding: 4rem 1rem;
+  background-color: #f8f9fa;
 }
 
 .features h2 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-  color: var(--text-color);
+  margin-bottom: 2rem;
+  color: #222;
 }
 
-.carousel-container {
+.carousel-wrapper {
   position: relative;
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel {
-  display: flex;
   overflow: hidden;
-  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
 .feature-card {
   min-width: 100%;
-  padding: 40px;
-  background: var(--bg-color);
+  box-sizing: border-box;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   text-align: center;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
 }
 
 .feature-icon {
-  margin-bottom: 20px;
-}
-
-.feature-icon i {
-  font-size: 3rem;
-  color: var(--primary-color);
+  font-size: 2.5rem;
+  color: #10b981;
+  margin-bottom: 1rem;
 }
 
 .feature-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: var(--text-color);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 .feature-card p {
-  color: var(--text-light);
-  margin-bottom: 20px;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #555;
 }
 
 .tech-tag {
+  margin-top: 1rem;
   display: inline-block;
-  background: var(--primary-color);
-  color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
+  background-color: #e0f2f1;
+  color: #00796b;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
 }
 
 .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--primary-color);
-  color: white;
+  background: none;
   border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #10b981;
   cursor: pointer;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-  z-index: 10;
-}
-
-.carousel-btn:hover {
-  background: var(--accent-color);
-  transform: translateY(-50%) scale(1.1);
-}
-
-.carousel-btn.prev {
-  left: -25px;
-}
-
-.carousel-btn.next {
-  right: -25px;
+  padding: 1rem;
 }
 
 .carousel-indicators {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 30px;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .indicator {
+  display: inline-block;
   width: 12px;
   height: 12px;
+  margin: 0 6px;
+  background-color: #ccc;
   border-radius: 50%;
-  background: var(--border-color);
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 .indicator.active {
-  background: var(--primary-color);
+  background-color: #10b981;
 }
+
 
 /* Audience Toggle */
 .audience-section {
