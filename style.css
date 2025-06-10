@@ -178,7 +178,7 @@ body {
   opacity: 0.7; /* Adjust for clarity of text */
 }
 
-@keyframes backgroundSlide {
+/* @keyframes backgroundSlide {
   0% {
     background-image: url('/images/dustbin.png');
   }
@@ -191,7 +191,7 @@ body {
   100% {
     background-image: url('/images/recycling_for_children.jpg.webp');
   }
-}
+} */
 
 [data-theme="dark"] .hero {
   background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
