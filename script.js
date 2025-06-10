@@ -499,3 +499,5 @@ document.addEventListener('DOMContentLoaded', function() {
 // Console welcome message
 console.log('%c🌍 Welcome to EcoCycle! 🌍', 'color: #16a34a; font-size: 20px; font-weight: bold;');
 console.log('%cThanks for checking out our code! Join us in making the world more sustainable.', 'color: #4ade80; font-size: 14px;');
+
+

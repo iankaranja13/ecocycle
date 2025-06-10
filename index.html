@@ -38,13 +38,15 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-  <div class="hero-content">
-    <h1>EcoCycle</h1>
-    <p class="hero-tagline">Earn while you save the planet</p>
-    <button class="cta-button">Join Now</button>
-  </div>
-</section>
-
+      <div class="hero-content">
+        <h1>EcoCycle</h1>
+        <p class="hero-tagline">Earn while you save the planet</p>
+        <button class="cta-button">Join Now</button>
+      </div>
+      <!-- <div class="hero-image">
+        <img src="/images/dustbin.png" alt="Children holding recycling symbols" />
+      </div> -->
+    </section>
 
     <!-- Brand Bar -->
     <section class="brand-bar">
@@ -83,48 +85,51 @@
       </div>
     </section>
 
+    <!-- Features Carousel -->
     <section id="features" class="features">
-  <div class="container">
-    <h2>Our Key Features</h2>
-    <div class="carousel-wrapper">
-      <button class="carousel-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
-
-      <div class="carousel" id="carousel">
-        <div class="carousel-track">
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-qrcode"></i></div>
-            <h3>DropPoint QR</h3>
-            <p>Scan QR codes at recycling drop points to log your contributions. Track your recycling history and earn points automatically with each scan.</p>
-            <span class="tech-tag">React Native + QR Scanner</span>
+      <div class="container">
+        <h2>Our Key Features</h2>
+        <div class="carousel-container">
+          <button class="carousel-btn prev" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="carousel">
+            <div class="feature-card active">
+              <div class="feature-icon">
+                <i class="fas fa-qrcode"></i>
+              </div>
+              <h3>DropPoint QR</h3>
+              <p>Scan QR codes at recycling drop points to log your contributions. Track your recycling history and earn points automatically with each scan.</p>
+              <span class="tech-tag">React Native + QR Scanner</span>
+            </div>
+            <div class="feature-card active">
+              <div class="feature-icon">
+                <i class="fas fa-coins"></i>
+              </div>
+              <h3>Recycle Points</h3>
+              <p>Earn points for every item recycled and redeem them for rewards. Get points by scanning, uploading receipts, and referring friends.</p>
+              <span class="tech-tag">Blockchain Rewards System</span>
+            </div>
+            <div class="feature-card active">
+              <div class="feature-icon">
+                <i class="fas fa-wallet"></i>
+              </div>
+              <h3>Green Wallet</h3>
+              <p>Manage your eco-earnings and rewards through our secure digital wallet. Daily stats for all your environment contributions and rewards.</p>
+              <span class="tech-tag">Secure Payment Integration</span>
+            </div>
           </div>
-
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-coins"></i></div>
-            <h3>Recycle Points</h3>
-            <p>Earn points for every item recycled and redeem them for rewards. Get points by scanning, uploading receipts, and referring friends.</p>
-            <span class="tech-tag">Blockchain Rewards System</span>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-wallet"></i></div>
-            <h3>Green Wallet</h3>
-            <p>Manage your eco-earnings and rewards through our secure digital wallet. Daily stats for all your environment contributions and rewards.</p>
-            <span class="tech-tag">Secure Payment Integration</span>
-          </div>
+          <button class="carousel-btn next" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="carousel-indicators">
+          <span class="indicator active" data-slide="0"></span>
+          <span class="indicator active" data-slide="1"></span>
+          <span class="indicator active" data-slide="2"></span>
         </div>
       </div>
-
-      <button class="carousel-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
-    </div>
-
-    <div class="carousel-indicators">
-      <span class="indicator active" data-slide="0"></span>
-      <span class="indicator active" data-slide="1"></span>
-      <span class="indicator active" data-slide="2"></span>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- Audience Toggle -->
     <section class="audience-section">
@@ -202,17 +207,17 @@
         <div class="team-grid">
           <div class="team-member">
             <div class="member-image">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Ian Wainwright" />
+              <img src="images/ceo.jpeg" alt="Ian Waruingi" />
             </div>
-            <h3>Ian Wainwright</h3>
+            <h3>Ian Waruingi</h3>
             <p class="member-role">Co-Founder & Developer</p>
             <p class="member-bio">Passionate about turning environmental challenges into tech solutions. Former software engineer with a mission to make sustainability accessible.</p>
           </div>
           <div class="team-member">
             <div class="member-image">
-              <img src="https://images.unsplash.com/photo-1494790108755-2616b612b412?w=300&h=300&fit=crop&crop=face" alt="Jane Mavende" />
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Job Mavende" />
             </div>
-            <h3>Jane Mavende</h3>
+            <h3>Job Mavende</h3>
             <p class="member-role">Head of Community</p>
             <p class="member-bio">Environmental advocate with 8 years of experience in community engagement. Believes in the power of collective action for environmental change.</p>
           </div>
