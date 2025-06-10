@@ -379,23 +379,26 @@ body {
 
 .carousel-container {
   position: relative;
-  max-width: 800px;
-  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
 }
 
 .carousel {
   display: flex;
-  overflow: hidden;
-  border-radius: 20px;
+  transition: transform 0.5s ease-in-out;
+  scroll-snap-type: x mandatory;
 }
-
 .feature-card {
-  min-width: 100%;
-  padding: 40px;
-  background: var(--bg-color);
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
+  margin: 0 10px;
+  max-width: 90%;
+  box-sizing: border-box;
 }
 
 .feature-icon {
@@ -433,16 +436,13 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--primary-color);
+  background: #00aa66;
   color: white;
   border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  padding: 0.8rem 1rem;
   cursor: pointer;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-  z-index: 10;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .carousel-btn:hover {
@@ -451,31 +451,32 @@ body {
 }
 
 .carousel-btn.prev {
-  left: -25px;
+  left: 0.5rem;
 }
 
 .carousel-btn.next {
-  right: -25px;
+  right: 0.5rem;
 }
 
+/* Indicators */
 .carousel-indicators {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 30px;
+  margin-top: 1rem;
 }
 
 .indicator {
   width: 12px;
   height: 12px;
+  background-color: #ccc;
   border-radius: 50%;
-  background: var(--border-color);
+  margin: 0 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .indicator.active {
-  background: var(--primary-color);
+  background-color: #00aa66;
 }
 
 /* Audience Toggle */
